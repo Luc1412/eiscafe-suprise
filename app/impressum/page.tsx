@@ -34,9 +34,9 @@ export default function ImpressumPage() {
           <p>Inhaltlich Verantwortlicher gem. § 6 MDStV: Michaela Greupner</p>
           <h3>Haftungshinweis</h3>
           <p>
-            Trotz sorgfältiger inhaltlicher Prüfung übernehmen wir keine Haftung für die
-            Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich
-            deren Betreiber verantwortlich.
+            Trotz sorgfältiger inhaltlicher Prüfung übernehmen wir keine Haftung
+            für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten
+            sind ausschließlich deren Betreiber verantwortlich.
           </p>
         </div>
       </section>

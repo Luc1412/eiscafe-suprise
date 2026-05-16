@@ -70,7 +70,10 @@ export default function Home() {
     <main>
       <SiteHeader />
 
-      <section id="start" className="relative isolate flex min-h-[86svh] items-end overflow-hidden pt-20">
+      <section
+        id="start"
+        className="relative isolate flex min-h-[86svh] items-end overflow-hidden pt-20"
+      >
         <div className="absolute inset-0 -z-20">
           {carouselImages.map((image) => (
             <Image
@@ -93,8 +96,8 @@ export default function Home() {
             Eiscafé Surprise
           </h1>
           <p className="mt-6 max-w-2xl text-lg font-semibold leading-8 text-white/92 sm:text-xl">
-            Seit 1979 Kaffeehausatmosphäre in Berlin-Weißensee: handgemachte Torten,
-            Fototorten, Eis und süße Momente an der Langhansstraße.
+            Seit 1979 Kaffeehausatmosphäre in Berlin-Weißensee: handgemachte
+            Torten, Fototorten, Eis und süße Momente an der Langhansstraße.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
@@ -143,25 +146,31 @@ export default function Home() {
           </div>
           <div className="grid gap-6 text-lg leading-8 text-[#4d3a35]">
             <p>
-              Hier finden Sie ein Eiscafé mit sehr gemütlicher Atmosphäre, wo sich Menschen
-              aller Altersgruppen wohlfühlen. Bei uns herrscht eine Kaffeehausatmosphäre im
-              Stil eines Wiener Cafés und dies seit 1979.
+              Hier finden Sie ein Eiscafé mit sehr gemütlicher Atmosphäre, wo
+              sich Menschen aller Altersgruppen wohlfühlen. Bei uns herrscht
+              eine Kaffeehausatmosphäre im Stil eines Wiener Cafés und dies seit
+              1979.
             </p>
             <p>
-              Unsere besondere Leistung ist es, die Torten und das Eis in hauseigener
-              Herstellung zu produzieren. Wir verwenden hochwertige Zutaten und setzen auf
-              Qualität und Geschmack, damit ein Stück Kuchen zum Kaffee genauso Freude macht
-              wie eine große Festtagstorte.
+              Unsere besondere Leistung ist es, die Torten und das Eis in
+              hauseigener Herstellung zu produzieren. Wir verwenden hochwertige
+              Zutaten und setzen auf Qualität und Geschmack, damit ein Stück
+              Kuchen zum Kaffee genauso Freude macht wie eine große
+              Festtagstorte.
             </p>
             <p>
-              Lassen Sie sich verwöhnen. Wir nehmen gern Ihre Bestellung entgegen und freuen
-              uns darauf, Ihren Tag mit einem Lächeln und einem leckeren Genuss zu versüßen.
+              Lassen Sie sich verwöhnen. Wir nehmen gern Ihre Bestellung
+              entgegen und freuen uns darauf, Ihren Tag mit einem Lächeln und
+              einem leckeren Genuss zu versüßen.
             </p>
           </div>
         </div>
       </section>
 
-      <section id="angebote" className="scroll-mt-20 bg-white/62 py-16 sm:py-24">
+      <section
+        id="angebote"
+        className="scroll-mt-20 bg-white/62 py-16 sm:py-24"
+      >
         <div className="section-shell">
           <div className="max-w-3xl">
             <p className="section-kicker">Unsere Angebote</p>
@@ -169,9 +178,9 @@ export default function Home() {
               Torten, Eis und kleine Überraschungen.
             </h2>
             <p className="mt-5 text-lg leading-8 text-[#4d3a35]">
-              Besonderes Augenmerk gilt unseren Fototorten und Bildertorten, die für Hochzeit,
-              Einschulung, runde Geburtstage und andere Anlässe eine persönliche Überraschung
-              darstellen.
+              Besonderes Augenmerk gilt unseren Fototorten und Bildertorten, die
+              für Hochzeit, Einschulung, runde Geburtstage und andere Anlässe
+              eine persönliche Überraschung darstellen.
             </p>
           </div>
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -207,13 +216,17 @@ export default function Home() {
           <div className="rounded-lg border border-[#efd7dc] bg-white p-4 shadow-sm sm:p-6">
             <div className="mb-4 flex items-center gap-3 text-[#AE3460]">
               <Clock3 aria-hidden="true" className="size-6" />
-              <h3 className="font-display text-2xl font-bold">Unsere Öffnungszeiten sind:</h3>
+              <h3 className="font-display text-2xl font-bold">
+                Unsere Öffnungszeiten sind:
+              </h3>
             </div>
             <div className="divide-y divide-[#f0dde1]">
               {hours.map(([day, time]) => (
                 <div key={day} className="grid grid-cols-[1fr_auto] gap-4 py-4">
                   <span className="font-bold text-[#201513]">{day}</span>
-                  <span className="text-right font-black text-[#AE3460]">{time}</span>
+                  <span className="text-right font-black text-[#AE3460]">
+                    {time}
+                  </span>
                 </div>
               ))}
             </div>
@@ -221,7 +234,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="kontakt" className="scroll-mt-20 bg-[#F6E6EB] py-16 sm:py-24">
+      <section
+        id="kontakt"
+        className="scroll-mt-20 bg-[#F6E6EB] py-16 sm:py-24"
+      >
         <div className="section-shell">
           <div className="grid gap-8 lg:grid-cols-[0.86fr_1.14fr]">
             <div>
@@ -249,8 +265,9 @@ export default function Home() {
                   </a>
                 </p>
                 <p className="leading-8">
-                  Aus Süden kommend mit der Tram 4 bis Antonplatz, dort in die Tram 12 bis
-                  Behaimstraße. Von Norden kommend mit der Tram 13 bis Behaimstraße.
+                  Aus Süden kommend mit der Tram 4 bis Antonplatz, dort in die
+                  Tram 12 bis Behaimstraße. Von Norden kommend mit der Tram 13
+                  bis Behaimstraße.
                 </p>
                 <a
                   href="https://www.google.com/maps/place/Eiscaf%C3%A9+Surprise/@52.5499049,13.4458813,19z/data=!4m6!3m5!1s0x47a84de8bd3b870b:0xe41b190621e23a9b!8m2!3d52.5498716!4d13.4459254!16s%2Fg%2F1vzqr8py?entry=ttu"

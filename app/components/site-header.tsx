@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Phone } from "lucide-react";
 
 const navItems = [
@@ -11,7 +12,11 @@ export function SiteHeader() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/35 bg-[#fffafc]/90 backdrop-blur-md">
       <nav className="section-shell flex min-h-16 items-center justify-between gap-4">
-        <a href="/#start" className="flex items-center gap-3" aria-label="Zur Startseite">
+        <Link
+          href="/#start"
+          className="flex items-center gap-3"
+          aria-label="Zur Startseite"
+        >
           <span className="grid size-10 place-items-center rounded-full bg-[#AE3460] text-lg font-black text-white shadow-sm">
             S
           </span>
@@ -23,16 +28,16 @@ export function SiteHeader() {
               Berlin-Weißensee
             </span>
           </span>
-        </a>
+        </Link>
         <div className="hidden items-center gap-1 lg:flex">
           {navItems.map(([label, href]) => (
-            <a
+            <Link
               key={href}
               href={href}
               className="rounded-full px-3 py-2 text-sm font-bold text-[#3b2a27] transition hover:bg-[#F6E6EB] hover:text-[#201513]"
             >
               {label}
-            </a>
+            </Link>
           ))}
         </div>
         <a
