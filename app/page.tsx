@@ -43,7 +43,7 @@ const offers = [
   },
   {
     title: "Torten & Kuchen",
-    text: "Hausgemachte Sahne-, Creme-, Eis- und gebackene Torten für die Kuchentheke und zum Bestellen.",
+    text: "Frische Kuchen und hausgemachte Torten aus eigener Herstellung.",
     icon: CakeSlice,
   },
   {
@@ -141,7 +141,7 @@ export default function Home() {
           <div>
             <p className="section-kicker">Über uns</p>
             <h2 className="font-display mt-3 text-4xl font-bold text-[#201513] sm:text-5xl">
-              Gemütlich wie früher, frisch für heute.
+              Traditioneller Charme, frisch serviert.
             </h2>
           </div>
           <div className="grid gap-6 text-lg leading-8 text-[#4d3a35]">
