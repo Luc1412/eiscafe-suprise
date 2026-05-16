@@ -11,13 +11,25 @@ const navItems = [
 export function SiteHeader() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/35 bg-[#fffafc]/90 backdrop-blur-md">
-      <nav className="section-shell flex min-h-16 items-center justify-between gap-4">
+      <a
+        href="#main-content"
+        className="sr-only left-4 top-4 z-50 rounded-full bg-[#AE3460] px-4 py-2 text-sm font-bold text-white focus:not-sr-only focus:fixed"
+      >
+        Zum Inhalt springen
+      </a>
+      <nav
+        className="section-shell flex min-h-16 items-center justify-between gap-4"
+        aria-label="Hauptnavigation"
+      >
         <Link
           href="/#start"
           className="flex items-center gap-3"
           aria-label="Zur Startseite"
         >
-          <span className="grid size-10 place-items-center rounded-full bg-[#AE3460] text-lg font-black text-white shadow-sm">
+          <span
+            className="grid size-10 place-items-center rounded-full bg-[#AE3460] text-lg font-black text-white shadow-sm"
+            aria-hidden="true"
+          >
             S
           </span>
           <span className="leading-tight">
