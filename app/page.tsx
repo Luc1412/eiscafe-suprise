@@ -263,11 +263,11 @@ export default function Home() {
                 </a>
               </div>
             </div>
-            <div className="overflow-hidden rounded-lg border-4 border-white bg-white shadow-sm">
+            <div className="self-start overflow-hidden rounded-lg border-4 border-white bg-white shadow-sm">
               <iframe
                 title="Karte zum Eiscafé Surprise"
                 src="https://www.google.com/maps?q=Eiscaf%C3%A9%20Surprise%2C%20Langhansstr.%20136%2C%2013086%20Berlin&z=15&hl=de&output=embed"
-                className="h-105 w-full"
+                className="block h-105 w-full"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               />
