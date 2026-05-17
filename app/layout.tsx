@@ -1,5 +1,33 @@
 import type { Metadata } from "next";
+import localFont from "next/font/local";
 import "./globals.css";
+
+const bodoniModa = localFont({
+  src: [
+    {
+      path: "../public/fonts/bodoni-moda-600.ttf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/bodoni-moda-700.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/bodoni-moda-800.ttf",
+      weight: "800",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/bodoni-moda-900.ttf",
+      weight: "900",
+      style: "normal",
+    },
+  ],
+  variable: "--font-display",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.eiscafe-surprise.de"),
@@ -67,7 +95,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de">
-      <body>{children}</body>
+      <body className={bodoniModa.variable}>{children}</body>
     </html>
   );
 }

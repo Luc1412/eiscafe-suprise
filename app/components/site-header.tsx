@@ -33,7 +33,7 @@ export function SiteHeader() {
             S
           </span>
           <span className="leading-tight">
-            <span className="font-display block text-lg font-bold text-[#201513]">
+            <span className="block font-(family-name:--font-display) text-lg font-bold text-[#201513]">
               Eis-Café Surprise
             </span>
             <span className="block text-xs font-semibold text-[#AE3460]">

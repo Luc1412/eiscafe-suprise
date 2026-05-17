@@ -18,7 +18,7 @@ export default function DatenschutzPage() {
       <main id="main-content" tabIndex={-1}>
         <section className="section-shell pt-28 pb-16 sm:pt-32 sm:pb-24">
           <p className="section-kicker">Rechtliches</p>
-          <h1 className="font-display mt-3 text-4xl font-bold text-[#201513] sm:text-6xl">
+          <h1 className="mt-3 font-(family-name:--font-display) text-4xl font-bold text-[#201513] sm:text-6xl">
             Datenschutz
           </h1>
 

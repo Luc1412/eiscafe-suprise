@@ -31,7 +31,7 @@ export function MapConsent() {
           <div className="mx-auto mb-5 grid size-12 place-items-center rounded-full bg-[#F6E6EB] text-[#AE3460]">
             <MapPin aria-hidden="true" className="size-6" />
           </div>
-          <h3 className="font-display text-2xl font-bold text-[#201513]">
+          <h3 className="font-(family-name:--font-display) text-2xl font-bold text-[#201513]">
             Google Maps laden?
           </h3>
           <p className="mt-4 leading-7 text-[#4d3a35]">

@@ -1,5 +1,37 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Bodoni Moda Surprise";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/bodoni-moda-600.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Bodoni Moda Surprise";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/bodoni-moda-700.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Bodoni Moda Surprise";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("/fonts/bodoni-moda-800.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Bodoni Moda Surprise";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("/fonts/bodoni-moda-900.ttf") format("truetype");
+}
+
 :root {
   --background: #fffafc;
   --foreground: #201513;
@@ -41,7 +73,10 @@ body {
 }
 
 .font-display {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family:
+    "Bodoni Moda Surprise", "Bodoni 72", "Didot", "Baskerville",
+    "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  font-variant-ligatures: common-ligatures;
 }
 
 .section-shell {
@@ -102,7 +137,9 @@ body {
 .legal-copy h2 {
   margin-top: 1.4rem;
   color: var(--rose-dark);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family:
+    "Bodoni Moda Surprise", "Bodoni 72", "Didot", "Baskerville",
+    "Palatino Linotype", "Book Antiqua", Georgia, serif;
   font-size: 1.1rem;
   font-weight: 700;
 }
