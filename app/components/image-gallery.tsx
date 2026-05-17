@@ -1,8 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import { useCallback, useEffect, useState } from "react";
-import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import { X } from "lucide-react";
+import {
+  ImageNavigationButtons,
+  useImageDialogControls,
+  useImageNavigation,
+} from "./image-navigation";
 
 type GalleryImage = {
   src: string;
@@ -14,52 +18,20 @@ type ImageGalleryProps = {
 };
 
 export function ImageGallery({ images }: ImageGalleryProps) {
-  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
-  const selectedImage =
-    selectedIndex === null ? null : (images[selectedIndex] ?? null);
+  const {
+    clearSelection,
+    selectedItem: selectedImage,
+    selectIndex,
+    showNext,
+    showPrevious,
+  } = useImageNavigation(images);
 
-  const showPreviousImage = useCallback(() => {
-    setSelectedIndex((currentIndex) => {
-      if (currentIndex === null) {
-        return currentIndex;
-      }
-
-      return (currentIndex - 1 + images.length) % images.length;
-    });
-  }, [images.length]);
-
-  const showNextImage = useCallback(() => {
-    setSelectedIndex((currentIndex) => {
-      if (currentIndex === null) {
-        return currentIndex;
-      }
-
-      return (currentIndex + 1) % images.length;
-    });
-  }, [images.length]);
-
-  useEffect(() => {
-    if (!selectedImage) {
-      return;
-    }
-
-    function handlePreviewKeydown(event: KeyboardEvent) {
-      if (event.key === "Escape") {
-        setSelectedIndex(null);
-      }
-
-      if (event.key === "ArrowLeft") {
-        showPreviousImage();
-      }
-
-      if (event.key === "ArrowRight") {
-        showNextImage();
-      }
-    }
-
-    window.addEventListener("keydown", handlePreviewKeydown);
-    return () => window.removeEventListener("keydown", handlePreviewKeydown);
-  }, [selectedImage, showNextImage, showPreviousImage]);
+  useImageDialogControls({
+    isOpen: Boolean(selectedImage),
+    onClose: clearSelection,
+    onNext: showNext,
+    onPrevious: showPrevious,
+  });
 
   return (
     <>
@@ -75,7 +47,7 @@ export function ImageGallery({ images }: ImageGalleryProps) {
             >
               <button
                 type="button"
-                onClick={() => setSelectedIndex(index)}
+                onClick={() => selectIndex(index)}
                 className="relative block h-full w-full cursor-zoom-in overflow-hidden"
                 aria-label={`${image.alt} vergrößern`}
               >
@@ -99,7 +71,7 @@ export function ImageGallery({ images }: ImageGalleryProps) {
           aria-modal="true"
           aria-label={selectedImage.alt}
           className="fixed inset-0 z-70 grid place-items-center bg-[#201513]/88 p-4"
-          onClick={() => setSelectedIndex(null)}
+          onClick={clearSelection}
         >
           <div
             className="relative h-[min(76svh,720px)] w-full max-w-5xl overflow-hidden rounded-lg border border-white/20 bg-[#201513] shadow-2xl"
@@ -113,25 +85,13 @@ export function ImageGallery({ images }: ImageGalleryProps) {
               className="object-contain"
               priority
             />
+            <ImageNavigationButtons
+              onNext={showNext}
+              onPrevious={showPrevious}
+            />
             <button
               type="button"
-              onClick={showPreviousImage}
-              className="absolute left-3 top-1/2 grid size-11 -translate-y-1/2 place-items-center rounded-full bg-white text-[#201513] shadow-sm transition hover:bg-[#F6E6EB]"
-              aria-label="Vorheriges Bild anzeigen"
-            >
-              <ChevronLeft aria-hidden="true" className="size-6" />
-            </button>
-            <button
-              type="button"
-              onClick={showNextImage}
-              className="absolute right-3 top-1/2 grid size-11 -translate-y-1/2 place-items-center rounded-full bg-white text-[#201513] shadow-sm transition hover:bg-[#F6E6EB]"
-              aria-label="Nächstes Bild anzeigen"
-            >
-              <ChevronRight aria-hidden="true" className="size-6" />
-            </button>
-            <button
-              type="button"
-              onClick={() => setSelectedIndex(null)}
+              onClick={clearSelection}
               className="absolute right-3 top-3 grid size-10 place-items-center rounded-full bg-white text-[#201513] shadow-sm transition hover:bg-[#F6E6EB]"
               aria-label="Bild schließen"
             >

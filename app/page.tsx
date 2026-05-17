@@ -1,18 +1,10 @@
 import Image from "next/image";
-import {
-  CakeSlice,
-  Clock3,
-  Coffee,
-  IceCreamBowl,
-  MapPin,
-  Navigation,
-  Phone,
-  Sparkles,
-} from "lucide-react";
+import { CakeSlice, Clock3, MapPin, Navigation, Phone } from "lucide-react";
 import { SiteFooter } from "./components/site-footer";
 import { SiteHeader } from "./components/site-header";
 import { ImageGallery } from "./components/image-gallery";
 import { MapConsent } from "./components/map-consent";
+import { OffersSection } from "./components/offers-section";
 
 const carouselImages = [
   {
@@ -34,34 +26,6 @@ const carouselImages = [
   {
     src: "/images/carousel/eiscafe-carousel_0.webp",
     alt: "Eis-Café Surprise mit klassischer Kuchenauslage",
-  },
-];
-
-const offers = [
-  {
-    title: "Torten & Kuchen",
-    text: "Frische Kuchen und hausgemachte Torten aus eigener Herstellung.",
-    icon: CakeSlice,
-  },
-  {
-    title: "Hausgemachtes Eis",
-    text: "Klassische und saisonale Eisspezialitäten aus eigener Herstellung.",
-    icon: IceCreamBowl,
-  },
-  {
-    title: "Kaffee & Getränke",
-    text: "Kaffeehausmomente mit Heißgetränken und kleinen Angeboten für zwischendurch.",
-    icon: Coffee,
-  },
-  {
-    title: "Individuelle Torten",
-    text: "Fototorten, Geburtstagstorten, Hochzeitstorten und Einschulungstorten nach Wunsch.",
-    icon: CakeSlice,
-  },
-  {
-    title: "Besondere Anlässe",
-    text: "Geburtstage, Hochzeiten, Familienfeiern und Trauerfeiern bis 25 Personen.",
-    icon: Sparkles,
   },
 ];
 
@@ -161,7 +125,7 @@ export default function Home() {
             </h1>
             <p className="mt-6 max-w-2xl text-lg font-semibold leading-8 text-white/92 sm:text-xl">
               Seit 1979 Kaffeehausatmosphäre in Berlin-Weißensee: handgemachte
-              Torten, Fototorten, Eis und süße Momente an der Langhansstraße.
+              Torten, Eis und süße Momente an der Langhansstraße.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
@@ -215,45 +179,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section
-          id="angebote"
-          className="scroll-mt-20 bg-white/62 py-16 sm:py-24"
-        >
-          <div className="section-shell">
-            <div className="max-w-3xl">
-              <p className="section-kicker">Unsere Angebote</p>
-              <h2 className="mt-3 hyphens-auto wrap-break-word text-balance font-(family-name:--font-display) text-4xl leading-[1.04] font-bold text-[#201513] sm:text-5xl">
-                Torten, Eis und kleine Überraschungen.
-              </h2>
-              <p className="mt-5 text-lg leading-8 text-[#4d3a35]">
-                Besonderes Augenmerk gilt unseren Fototorten und Bildertorten,
-                die für Hochzeit, Einschulung, runde Geburtstage und andere
-                Anlässe eine persönliche Überraschung darstellen.
-              </p>
-            </div>
-            <div className="mt-10 flex flex-wrap justify-center gap-4">
-              {offers.map((offer) => {
-                const Icon = offer.icon;
-                return (
-                  <article
-                    key={offer.title}
-                    className="w-full rounded-lg border border-[#efd7dc] bg-[#fffafc] p-6 shadow-sm sm:w-[calc((100%-1rem)/2)] lg:w-[calc((100%-2rem)/3)]"
-                  >
-                    <div className="mb-5 grid size-11 place-items-center rounded-full bg-[#F6E6EB] text-[#AE3460]">
-                      <Icon aria-hidden="true" className="size-5" />
-                    </div>
-                    <h3 className="font-(family-name:--font-display) text-2xl font-bold text-[#201513]">
-                      {offer.title}
-                    </h3>
-                    <p className="mt-3 leading-7 text-[#5c4944]">
-                      {offer.text}
-                    </p>
-                  </article>
-                );
-              })}
-            </div>
-          </div>
-        </section>
+        <OffersSection />
 
         <section id="oeffnungszeiten" className="scroll-mt-20 py-16 sm:py-24">
           <div className="section-shell grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
