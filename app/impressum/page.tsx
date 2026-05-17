@@ -3,8 +3,8 @@ import { SiteFooter } from "../components/site-footer";
 import { SiteHeader } from "../components/site-header";
 
 export const metadata: Metadata = {
-  title: "Impressum | Eiscafé Surprise",
-  description: "Impressum des Eiscafé Surprise in Berlin-Weißensee.",
+  title: "Impressum | Eis-Café Surprise",
+  description: "Impressum des Eis-Café Surprise in Berlin-Weißensee.",
 };
 
 export default function ImpressumPage() {
@@ -20,7 +20,7 @@ export default function ImpressumPage() {
 
           <div className="legal-copy mt-10 max-w-3xl rounded-lg border border-[#efd7dc] bg-white p-6 shadow-sm sm:p-8">
             <p>
-              <strong>Eiscafé Surprise</strong>
+              <strong>Eis-Café Surprise</strong>
               <br />
               Langhansstr. 136
               <br />

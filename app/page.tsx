@@ -15,23 +15,23 @@ import { SiteHeader } from "./components/site-header";
 const carouselImages = [
   {
     src: "/images/eiscafe-carousel_1.jpg",
-    alt: "Innenansicht des Eiscafés Surprise",
+    alt: "Innenansicht des Eis-Cafés Surprise",
   },
   {
     src: "/images/eiscafe-carousel_2.jpg",
-    alt: "Torten und Eis im Eiscafé Surprise",
+    alt: "Torten und Eis im Eis-Café Surprise",
   },
   {
     src: "/images/eiscafe-carousel_3.jpg",
-    alt: "Kaffeehausatmosphäre im Eiscafé Surprise",
+    alt: "Kaffeehausatmosphäre im Eis-Café Surprise",
   },
   {
     src: "/images/eiscafe-carousel_4.jpg",
-    alt: "Hausgemachte Spezialitäten im Eiscafé Surprise",
+    alt: "Hausgemachte Spezialitäten im Eis-Café Surprise",
   },
   {
     src: "/images/eiscafe-carousel_0.jpg",
-    alt: "Eiscafé Surprise mit klassischer Kuchenauslage",
+    alt: "Eis-Café Surprise mit klassischer Kuchenauslage",
   },
 ];
 
@@ -95,7 +95,7 @@ export default function Home() {
               Eis und Torten in eigener Herstellung
             </p>
             <h1 className="font-display max-w-4xl text-5xl font-bold leading-[0.95] sm:text-7xl lg:text-8xl">
-              Eiscafé Surprise
+              Eis-Café Surprise
             </h1>
             <p className="mt-6 max-w-2xl text-lg font-semibold leading-8 text-white/92 sm:text-xl">
               Seit 1979 Kaffeehausatmosphäre in Berlin-Weißensee: handgemachte
@@ -122,7 +122,7 @@ export default function Home() {
 
         <section
           className="section-shell py-5"
-          aria-label="Bilder aus dem Eiscafé Surprise"
+          aria-label="Bilder aus dem Eis-Café Surprise"
         >
           <ul className="grid grid-cols-5 gap-2 sm:gap-4">
             {carouselImages.map((image) => (
@@ -151,7 +151,7 @@ export default function Home() {
             </div>
             <div className="grid gap-6 text-lg leading-8 text-[#4d3a35]">
               <p>
-                Hier finden Sie ein Eiscafé mit sehr gemütlicher Atmosphäre, wo
+                Hier finden Sie ein Eis-Café mit sehr gemütlicher Atmosphäre, wo
                 sich Menschen aller Altersgruppen wohlfühlen. Bei uns herrscht
                 eine Kaffeehausatmosphäre im Stil eines Wiener Cafés und dies
                 seit 1979.
@@ -293,7 +293,7 @@ export default function Home() {
               </div>
               <div className="self-start overflow-hidden rounded-lg border-4 border-white bg-white shadow-sm">
                 <iframe
-                  title="Karte zum Eiscafé Surprise"
+                  title="Karte zum Eis-Café Surprise"
                   src="https://www.google.com/maps?q=Eiscaf%C3%A9%20Surprise%2C%20Langhansstr.%20136%2C%2013086%20Berlin&z=15&hl=de&output=embed"
                   className="block h-105 w-full"
                   loading="lazy"

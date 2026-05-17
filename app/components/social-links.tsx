@@ -1,13 +1,13 @@
 const socialLinks = [
   {
     label: "Instagram",
-    ariaLabel: "Eiscafé Surprise auf Instagram öffnen",
+    ariaLabel: "Eis-Café Surprise auf Instagram öffnen",
     href: "https://www.instagram.com/eiscafe_surprise/",
     Icon: InstagramIcon,
   },
   {
     label: "Facebook",
-    ariaLabel: "Eiscafé Surprise auf Facebook öffnen",
+    ariaLabel: "Eis-Café Surprise auf Facebook öffnen",
     href: "https://www.facebook.com/EiscafeSurprise/",
     Icon: FacebookIcon,
   }

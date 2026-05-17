@@ -34,7 +34,7 @@ export function SiteHeader() {
           </span>
           <span className="leading-tight">
             <span className="font-display block text-lg font-bold text-[#201513]">
-              Eiscafé Surprise
+              Eis-Café Surprise
             </span>
             <span className="block text-xs font-semibold text-[#AE3460]">
               Berlin-Weißensee

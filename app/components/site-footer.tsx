@@ -6,7 +6,7 @@ export function SiteFooter() {
   return (
     <footer className="bg-[#201513] py-8 text-white">
       <div className="section-shell flex flex-col gap-4 text-sm sm:flex-row sm:items-center sm:justify-between">
-        <p>© 2026 Eiscafé Surprise. Alle Rechte vorbehalten.</p>
+        <p>© 2026 Eis-Café Surprise. Alle Rechte vorbehalten.</p>
         <div className="flex flex-wrap items-center gap-5">
           <SocialLinks
             iconOnly

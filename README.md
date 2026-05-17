@@ -1,6 +1,6 @@
-# Eiscafé Surprise
+# Eis-Café Surprise
 
-Modern single-page website for Eiscafé Surprise in Berlin-Weißensee, built with Next.js, Tailwind CSS v4, and Bun.
+Modern single-page website for Eis-Café Surprise in Berlin-Weißensee, built with Next.js, Tailwind CSS v4, and Bun.
 
 ## Stack
 

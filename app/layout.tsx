@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Eiscafé Surprise | Eis und Torten in Berlin-Weißensee",
+  title: "Eis-Café Surprise | Eis und Torten in Berlin-Weißensee",
   description:
-    "Eiscafé Surprise in Berlin-Weißensee: Eis, Torten, Fototorten und Kaffeehausatmosphäre seit 1979.",
+    "Eis-Café Surprise in Berlin-Weißensee: Eis, Torten, Fototorten und Kaffeehausatmosphäre seit 1979.",
 };
 
 export default function RootLayout({
