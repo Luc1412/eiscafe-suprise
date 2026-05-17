@@ -317,11 +317,32 @@ export default function Home() {
                       +49 30 9251265
                     </a>
                   </p>
-                  <p className="leading-8">
-                    Aus Süden kommend mit der Tram 4 bis Antonplatz, dort in die
-                    Tram 12 bis Behaimstraße. Von Norden kommend mit der Tram 13
-                    bis Behaimstraße.
-                  </p>
+                  <div className="rounded-lg border border-white/70 bg-white/55 p-5">
+                    <p className="font-black text-[#201513]">
+                      Anfahrt mit der Tram
+                    </p>
+                    <dl className="mt-4 space-y-3 text-base leading-7">
+                      <div>
+                        <dt className="font-bold text-[#AE3460]">
+                          Aus Richtung Süden
+                        </dt>
+                        <dd>
+                          Mit der Tram 4 bis Antonplatz, dort weiter mit der
+                          Tram 12 bis Behaimstraße.
+                        </dd>
+                      </div>
+                      <div>
+                        <dt className="font-bold text-[#AE3460]">
+                          Aus Richtung Norden
+                        </dt>
+                        <dd>Mit der Tram 13 bis Behaimstraße.</dd>
+                      </div>
+                    </dl>
+                    <p className="mt-4 text-base leading-7">
+                      Von der Haltestelle Behaimstraße sind es nur wenige
+                      Schritte bis zur Langhansstraße 136.
+                    </p>
+                  </div>
                   <a
                     href="https://www.google.com/maps/place/Eiscaf%C3%A9+Surprise/@52.5499049,13.4458813,19z/data=!4m6!3m5!1s0x47a84de8bd3b870b:0xe41b190621e23a9b!8m2!3d52.5498716!4d13.4459254!16s%2Fg%2F1vzqr8py?entry=ttu"
                     target="_blank"
