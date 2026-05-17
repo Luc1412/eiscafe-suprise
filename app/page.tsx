@@ -146,7 +146,7 @@ export default function Home() {
             <div>
               <p className="section-kicker">Über uns</p>
               <h2 className="font-display mt-3 text-4xl font-bold text-[#201513] sm:text-5xl">
-                Traditioneller Charme, frisch serviert.
+                Kaffeehausatmosphäre seit 1979.
               </h2>
             </div>
             <div className="grid gap-6 text-lg leading-8 text-[#4d3a35]">
