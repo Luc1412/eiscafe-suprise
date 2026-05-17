@@ -71,9 +71,63 @@ const hours = [
   ["Feiertage", "13.00 - 18.00 Uhr"],
 ];
 
+const localBusinessJsonLd = {
+  "@context": "https://schema.org",
+  "@type": ["CafeOrCoffeeShop", "Bakery"],
+  name: "Eis-Café Surprise",
+  description:
+    "Eis-Café in Berlin-Weißensee mit hausgemachtem Eis, Kuchen, individuellen Torten und Wiener Kaffeehausatmosphäre seit 1979.",
+  url: "https://www.eiscafe-surprise.de/",
+  telephone: "+49309251265",
+  image: [
+    "https://www.eiscafe-surprise.de/images/eiscafe-carousel_1.jpg",
+    "https://www.eiscafe-surprise.de/images/eiscafe-carousel_2.jpg",
+    "https://www.eiscafe-surprise.de/images/eiscafe-carousel_4.jpg",
+  ],
+  priceRange: "€€",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Langhansstraße 136",
+    postalCode: "13086",
+    addressLocality: "Berlin",
+    addressCountry: "DE",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 52.5498716,
+    longitude: 13.4459254,
+  },
+  sameAs: [
+    "https://www.instagram.com/eiscafe_surprise/",
+    "https://www.facebook.com/EiscafeSurprise/",
+    "https://www.google.com/maps/place/Eiscaf%C3%A9+Surprise/@52.5498748,13.4410545,17z/data=!3m1!4b1!4m6!3m5!1s0x47a84de8bd3b870b:0xe41b190621e23a9b!8m2!3d52.5498716!4d13.4459254!16s%2Fg%2F1vzqr8py",
+  ],
+  servesCuisine: ["Eis", "Kuchen", "Torten", "Kaffee"],
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "12:00",
+      closes: "18:00",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Saturday", "Sunday", "PublicHolidays"],
+      opens: "13:00",
+      closes: "18:00",
+    },
+  ],
+};
+
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(localBusinessJsonLd),
+        }}
+      />
       <SiteHeader />
 
       <main id="main-content" tabIndex={-1}>

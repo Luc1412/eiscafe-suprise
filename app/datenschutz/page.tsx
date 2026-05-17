@@ -3,9 +3,12 @@ import { SiteFooter } from "../components/site-footer";
 import { SiteHeader } from "../components/site-header";
 
 export const metadata: Metadata = {
-  title: "Datenschutz | Eis-Café Surprise",
+  title: "Datenschutz",
   description:
     "Datenschutzerklärung des Eis-Café Surprise in Berlin-Weißensee.",
+  alternates: {
+    canonical: "/datenschutz",
+  },
 };
 
 export default function DatenschutzPage() {

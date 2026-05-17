@@ -3,8 +3,11 @@ import { SiteFooter } from "../components/site-footer";
 import { SiteHeader } from "../components/site-header";
 
 export const metadata: Metadata = {
-  title: "Impressum | Eis-Café Surprise",
+  title: "Impressum",
   description: "Impressum des Eis-Café Surprise in Berlin-Weißensee.",
+  alternates: {
+    canonical: "/impressum",
+  },
 };
 
 export default function ImpressumPage() {
