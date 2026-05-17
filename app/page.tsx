@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { SiteFooter } from "./components/site-footer";
 import { SiteHeader } from "./components/site-header";
+import { ImageGallery } from "./components/image-gallery";
 
 const carouselImages = [
   {
@@ -125,26 +126,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section
-          className="section-shell py-5"
-          aria-label="Bilder aus dem Eis-Café Surprise"
-        >
-          <ul className="grid grid-cols-5 gap-2 sm:gap-4">
-            {carouselImages.map((image) => (
-              <li
-                key={image.src}
-                className="relative aspect-square overflow-hidden rounded-[0.45rem] border-2 border-white shadow-sm"
-              >
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  loading="eager"
-                  className="h-full w-full object-cover"
-                />
-              </li>
-            ))}
-          </ul>
-        </section>
+        <ImageGallery images={carouselImages} />
 
         <section id="ueber-uns" className="scroll-mt-20 py-16 sm:py-24">
           <div className="section-shell grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
