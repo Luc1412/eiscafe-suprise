@@ -37,14 +37,14 @@ const carouselImages = [
 
 const offers = [
   {
-    title: "Hausgemachtes Eis",
-    text: "Klassische und saisonale Eisspezialitäten aus eigener Herstellung.",
-    icon: IceCreamBowl,
-  },
-  {
     title: "Torten & Kuchen",
     text: "Frische Kuchen und hausgemachte Torten aus eigener Herstellung.",
     icon: CakeSlice,
+  },
+  {
+    title: "Hausgemachtes Eis",
+    text: "Klassische und saisonale Eisspezialitäten aus eigener Herstellung.",
+    icon: IceCreamBowl,
   },
   {
     title: "Kaffee & Getränke",
@@ -52,8 +52,13 @@ const offers = [
     icon: Coffee,
   },
   {
+    title: "Individuelle Torten",
+    text: "Fototorten, Geburtstagstorten, Hochzeitstorten und Einschulungstorten nach Wunsch.",
+    icon: CakeSlice,
+  },
+  {
     title: "Besondere Anlässe",
-    text: "Fototorten, Hochzeitstorten und persönliche Überraschungen für Geburtstag, Einschulung und Feiern.",
+    text: "Geburtstage, Hochzeiten, Familienfeiern und Trauerfeiern bis 25 Personen.",
     icon: Sparkles,
   },
 ];
@@ -188,13 +193,13 @@ export default function Home() {
                 Anlässe eine persönliche Überraschung darstellen.
               </p>
             </div>
-            <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="mt-10 flex flex-wrap justify-center gap-4">
               {offers.map((offer) => {
                 const Icon = offer.icon;
                 return (
                   <article
                     key={offer.title}
-                    className="rounded-lg border border-[#efd7dc] bg-[#fffafc] p-6 shadow-sm"
+                    className="w-full rounded-lg border border-[#efd7dc] bg-[#fffafc] p-6 shadow-sm sm:w-[calc((100%-1rem)/2)] lg:w-[calc((100%-2rem)/3)]"
                   >
                     <div className="mb-5 grid size-11 place-items-center rounded-full bg-[#F6E6EB] text-[#AE3460]">
                       <Icon aria-hidden="true" className="size-5" />
