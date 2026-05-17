@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Phone } from "lucide-react";
 
 const navItems = [
@@ -26,11 +27,15 @@ export function SiteHeader() {
           className="flex items-center gap-3"
           aria-label="Zur Startseite"
         >
-          <span
-            className="grid size-10 place-items-center rounded-full bg-[#AE3460] text-lg font-black text-white shadow-sm"
-            aria-hidden="true"
-          >
-            S
+          <span className="grid size-11 place-items-center overflow-hidden rounded-full bg-white shadow-sm ring-1 ring-[#AE3460]/20">
+            <Image
+              src="/images/brand/logo.png"
+              alt=""
+              width={44}
+              height={44}
+              className="size-10 object-cover"
+              priority
+            />
           </span>
           <span className="leading-tight">
             <span className="block font-(family-name:--font-display) text-lg font-bold text-[#201513]">

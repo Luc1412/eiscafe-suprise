@@ -51,6 +51,27 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  icons: {
+    icon: [
+      {
+        url: "/favicons/favicon-32x32.png",
+        sizes: "32x32",
+        type: "image/png",
+      },
+      {
+        url: "/favicons/favicon-16x16.png",
+        sizes: "16x16",
+        type: "image/png",
+      },
+    ],
+    shortcut: "/favicons/favicon.ico",
+    apple: {
+      url: "/favicons/apple-touch-icon.png",
+      sizes: "180x180",
+      type: "image/png",
+    },
+  },
+  manifest: "/favicons/site.webmanifest",
   openGraph: {
     title: "Eis-Café Surprise | Eis, Torten und Kaffee in Berlin-Weißensee",
     description:
@@ -61,7 +82,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/eiscafe-carousel_1.jpg",
+        url: "/images/carousel/eiscafe-carousel_1.jpg",
         width: 1200,
         height: 900,
         alt: "Innenansicht des Eis-Cafés Surprise in Berlin-Weißensee",
@@ -73,7 +94,7 @@ export const metadata: Metadata = {
     title: "Eis-Café Surprise | Berlin-Weißensee",
     description:
       "Hausgemachtes Eis, Kuchen und individuelle Torten in Wiener Kaffeehausatmosphäre.",
-    images: ["/images/eiscafe-carousel_1.jpg"],
+    images: ["/images/carousel/eiscafe-carousel_1.jpg"],
   },
   robots: {
     index: true,

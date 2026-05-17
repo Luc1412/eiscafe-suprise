@@ -16,23 +16,23 @@ import { MapConsent } from "./components/map-consent";
 
 const carouselImages = [
   {
-    src: "/images/eiscafe-carousel_1.jpg",
+    src: "/images/carousel/eiscafe-carousel_1.jpg",
     alt: "Innenansicht des Eis-Cafés Surprise",
   },
   {
-    src: "/images/eiscafe-carousel_2.jpg",
+    src: "/images/carousel/eiscafe-carousel_2.jpg",
     alt: "Torten und Eis im Eis-Café Surprise",
   },
   {
-    src: "/images/eiscafe-carousel_3.jpg",
+    src: "/images/carousel/eiscafe-carousel_3.jpg",
     alt: "Kaffeehausatmosphäre im Eis-Café Surprise",
   },
   {
-    src: "/images/eiscafe-carousel_4.jpg",
+    src: "/images/carousel/eiscafe-carousel_4.jpg",
     alt: "Hausgemachte Spezialitäten im Eis-Café Surprise",
   },
   {
-    src: "/images/eiscafe-carousel_0.jpg",
+    src: "/images/carousel/eiscafe-carousel_0.jpg",
     alt: "Eis-Café Surprise mit klassischer Kuchenauslage",
   },
 ];
@@ -80,10 +80,11 @@ const localBusinessJsonLd = {
     "Eis-Café in Berlin-Weißensee mit hausgemachtem Eis, Kuchen, individuellen Torten und Wiener Kaffeehausatmosphäre seit 1979.",
   url: "https://www.eiscafe-surprise.de/",
   telephone: "+49309251265",
+  logo: "https://www.eiscafe-surprise.de/images/brand/logo.png",
   image: [
-    "https://www.eiscafe-surprise.de/images/eiscafe-carousel_1.jpg",
-    "https://www.eiscafe-surprise.de/images/eiscafe-carousel_2.jpg",
-    "https://www.eiscafe-surprise.de/images/eiscafe-carousel_4.jpg",
+    "https://www.eiscafe-surprise.de/images/carousel/eiscafe-carousel_1.jpg",
+    "https://www.eiscafe-surprise.de/images/carousel/eiscafe-carousel_2.jpg",
+    "https://www.eiscafe-surprise.de/images/carousel/eiscafe-carousel_4.jpg",
   ],
   priceRange: "€€",
   address: {
