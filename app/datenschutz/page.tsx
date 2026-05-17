@@ -125,9 +125,19 @@ export default function DatenschutzPage() {
 
             <h2>Google Maps</h2>
             <p>
-              Diese Seite bindet zur Darstellung der Anfahrt eine Karte von
-              Google Maps ein. Beim Aufruf der Karte können Daten an Google
-              übertragen werden. Weitere Informationen zur Verarbeitung durch
+              Diese Seite stellt im Kontaktbereich eine Karte von Google Maps
+              zur Darstellung der Anfahrt bereit. Die Karte wird beim Aufruf der
+              Seite nicht automatisch geladen. Stattdessen erscheint zunächst
+              ein Hinweis mit der Schaltfläche „Karte laden“. Erst wenn Sie
+              diese Schaltfläche anklicken, wird die Karte eingebunden und eine
+              Verbindung zu Google hergestellt.
+            </p>
+            <p>
+              Nach Ihrer Zustimmung können personenbezogene Daten, insbesondere
+              Ihre IP-Adresse, technische Browser- und Gerätedaten sowie
+              Informationen zum Aufruf der Karte, an Google übertragen werden.
+              Anbieter ist Google Ireland Limited, Gordon House, Barrow Street,
+              Dublin 4, Irland. Weitere Informationen zur Verarbeitung durch
               Google finden Sie in den Datenschutzhinweisen von Google.
             </p>
 

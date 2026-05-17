@@ -12,6 +12,7 @@ import {
 import { SiteFooter } from "./components/site-footer";
 import { SiteHeader } from "./components/site-header";
 import { ImageGallery } from "./components/image-gallery";
+import { MapConsent } from "./components/map-consent";
 
 const carouselImages = [
   {
@@ -332,15 +333,7 @@ export default function Home() {
                   </a>
                 </div>
               </div>
-              <div className="self-start overflow-hidden rounded-lg border-4 border-white bg-white shadow-sm">
-                <iframe
-                  title="Karte zum Eis-Café Surprise"
-                  src="https://www.google.com/maps?q=Eiscaf%C3%A9%20Surprise%2C%20Langhansstr.%20136%2C%2013086%20Berlin&z=15&hl=de&output=embed"
-                  className="block h-105 w-full"
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                />
-              </div>
+              <MapConsent />
             </div>
           </div>
         </section>
