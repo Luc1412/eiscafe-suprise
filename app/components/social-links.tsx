@@ -10,7 +10,7 @@ const socialLinks = [
     ariaLabel: "Eis-Café Surprise auf Facebook öffnen",
     href: "https://www.facebook.com/EiscafeSurprise/",
     Icon: FacebookIcon,
-  }
+  },
 ];
 
 type SocialLinksProps = {
