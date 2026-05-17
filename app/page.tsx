@@ -187,8 +187,8 @@ export default function Home() {
           <div className="section-shell grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
             <div>
               <p className="section-kicker">Über uns</p>
-              <h2 className="font-display mt-3 text-4xl font-bold text-[#201513] sm:text-5xl">
-                Kaffeehausatmosphäre seit 1979.
+              <h2 className="font-display mt-3 hyphens-auto wrap-break-words text-balance text-4xl sm:text-5xl font-bold leading-[1.04] text-[#201513]">
+                Kaffeehaus&shy;atmosphäre seit 1979.
               </h2>
             </div>
             <div className="grid gap-6 text-lg leading-8 text-[#4d3a35]">
@@ -221,7 +221,7 @@ export default function Home() {
           <div className="section-shell">
             <div className="max-w-3xl">
               <p className="section-kicker">Unsere Angebote</p>
-              <h2 className="font-display mt-3 text-4xl font-bold text-[#201513] sm:text-5xl">
+              <h2 className="font-display mt-3 hyphens-auto wrap-break-words text-balance text-4xl sm:text-5xl font-bold leading-[1.04] text-[#201513]">
                 Torten, Eis und kleine Überraschungen.
               </h2>
               <p className="mt-5 text-lg leading-8 text-[#4d3a35]">
@@ -258,7 +258,7 @@ export default function Home() {
           <div className="section-shell grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
             <div>
               <p className="section-kicker">Öffnungszeiten</p>
-              <h2 className="font-display mt-3 text-4xl font-bold text-[#201513] sm:text-5xl">
+              <h2 className="font-display mt-3 hyphens-auto wrap-break-words text-balance text-4xl sm:text-5xl font-bold leading-[1.04] text-[#201513]">
                 Unsere Eis- und Kuchenzeiten.
               </h2>
             </div>
@@ -294,7 +294,7 @@ export default function Home() {
             <div className="grid gap-8 lg:grid-cols-[0.86fr_1.14fr]">
               <div>
                 <p className="section-kicker">Kontakt</p>
-                <h2 className="font-display mt-3 text-4xl font-bold text-[#201513] sm:text-5xl">
+                <h2 className="font-display mt-3 hyphens-auto wrap-break-words text-balance text-4xl sm:text-5xl font-bold leading-[1.04] text-[#201513]">
                   Besuchen Sie uns in Weißensee.
                 </h2>
                 <div className="mt-8 space-y-5 text-lg text-[#3d302c]">
