@@ -82,7 +82,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/carousel/eiscafe-carousel_1.jpg",
+        url: "/images/carousel/eiscafe-carousel_1.webp",
         width: 1200,
         height: 900,
         alt: "Innenansicht des Eis-Cafés Surprise in Berlin-Weißensee",
@@ -94,7 +94,7 @@ export const metadata: Metadata = {
     title: "Eis-Café Surprise | Berlin-Weißensee",
     description:
       "Hausgemachtes Eis, Kuchen und individuelle Torten in Wiener Kaffeehausatmosphäre.",
-    images: ["/images/carousel/eiscafe-carousel_1.jpg"],
+    images: ["/images/carousel/eiscafe-carousel_1.webp"],
   },
   robots: {
     index: true,

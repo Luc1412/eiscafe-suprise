@@ -29,7 +29,7 @@ export function SiteHeader() {
         >
           <span className="grid size-11 place-items-center overflow-hidden rounded-full bg-white shadow-sm ring-1 ring-[#AE3460]/20">
             <Image
-              src="/images/brand/logo.png"
+              src="/images/brand/logo.webp"
               alt=""
               width={44}
               height={44}
