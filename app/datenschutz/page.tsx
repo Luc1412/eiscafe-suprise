@@ -111,17 +111,17 @@ export default function DatenschutzPage() {
               dieser Website verarbeitet Vercel technische Zugriffsdaten, die
               zur Auslieferung, Stabilität und Sicherheit der Website
               erforderlich sind. Dazu können insbesondere IP-Adresse, Datum und
-              Uhrzeit des Zugriffs, aufgerufene Seiten, Referrer-URL,
-              Browser- und Geräteinformationen sowie Server-Logdaten gehören.
-              Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f
+              Uhrzeit des Zugriffs, aufgerufene Seiten, Referrer-URL, Browser-
+              und Geräteinformationen sowie Server-Logdaten gehören. Die
+              Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f
               DS-GVO. Unser berechtigtes Interesse liegt in der sicheren,
               schnellen und zuverlässigen Bereitstellung dieser Website.
             </p>
             <p>
               Für die technische Verwaltung der Domain und die Auflösung von
               DNS-Anfragen nutzen wir Cloudflare. Anbieter ist Cloudflare, Inc.,
-              101 Townsend St, San Francisco, CA 94107, USA. Bei der Nutzung
-              der Domain können DNS- und technische Verbindungsdaten verarbeitet
+              101 Townsend St, San Francisco, CA 94107, USA. Bei der Nutzung der
+              Domain können DNS- und technische Verbindungsdaten verarbeitet
               werden, die für die Erreichbarkeit der Website erforderlich sind.
               Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f
               DS-GVO. Unser berechtigtes Interesse liegt in der zuverlässigen
