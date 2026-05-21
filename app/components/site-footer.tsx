@@ -23,14 +23,14 @@ export function SiteFooter() {
             <Link href="/datenschutz" className="hover:text-[#f8bbd0]">
               Datenschutz
             </Link>
-            <Link
-              href="/#start"
+            <a
+              href="#"
               className="grid size-8 place-items-center rounded-full border border-white/25 text-white transition hover:border-[#f8bbd0] hover:text-[#f8bbd0]"
               aria-label="Nach oben"
               title="Nach oben"
             >
               <ArrowUp aria-hidden="true" className="size-4" />
-            </Link>
+            </a>
           </nav>
         </div>
       </div>
