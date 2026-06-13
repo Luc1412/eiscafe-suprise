@@ -135,6 +135,28 @@ export default function DatenschutzPage() {
               Datenschutzhinweisen von Vercel und Cloudflare.
             </p>
 
+            <h2>Vercel Web Analytics</h2>
+            <p>
+              Wir nutzen Vercel Web Analytics, um die Nutzung dieser Website in
+              aggregierter Form auszuwerten und unser Angebot technisch sowie
+              inhaltlich zu verbessern. Anbieter ist Vercel Inc., 440 N
+              Barranca Ave #4133, Covina, CA 91723, USA.
+            </p>
+            <p>
+              Vercel Web Analytics verwendet nach Angaben des Anbieters keine
+              Cookies und erstellt keine personenbezogenen Nutzerprofile. Die
+              Auswertung erfolgt anhand aggregierter Informationen wie
+              Seitenaufrufen, Referrer, ungefährer Region, Browser-,
+              Betriebssystem- und Geräteklasse. Wir übermitteln keine
+              personenbezogenen Inhalte in Analyseereignissen.
+            </p>
+            <p>
+              Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f
+              DS-GVO. Unser berechtigtes Interesse liegt in der statistischen
+              Analyse der Nutzung, der Optimierung der Website und der
+              Verbesserung der Auffindbarkeit unserer Inhalte.
+            </p>
+
             <h2>Routinemäßige Löschung und Sperrung personenbezogener Daten</h2>
             <p>
               Der für die Verarbeitung Verantwortliche verarbeitet und speichert
