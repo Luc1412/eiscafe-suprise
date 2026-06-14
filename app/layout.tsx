@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const bodoniModa = localFont({
@@ -116,7 +117,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de">
-      <body className={bodoniModa.variable}>{children}</body>
+      <body className={bodoniModa.variable}>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
