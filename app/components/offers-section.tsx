@@ -336,7 +336,7 @@ export function OffersSection() {
           onClick={closeOffer}
         >
           <div
-            className="relative grid h-[94svh] w-full max-w-352 overflow-hidden rounded-lg border border-white/25 bg-[#fffafc] shadow-2xl lg:h-auto lg:max-h-[94svh] lg:grid-cols-[1.75fr_0.75fr]"
+            className="relative grid h-[94svh] w-full max-w-352 grid-rows-[42svh_minmax(0,1fr)] overflow-hidden rounded-lg border border-white/25 bg-[#fffafc] shadow-2xl sm:grid-rows-[50svh_minmax(0,1fr)] lg:h-auto lg:max-h-[94svh] lg:grid-cols-[1.75fr_0.75fr] lg:grid-rows-none"
             onClick={(event) => event.stopPropagation()}
           >
             <button
@@ -348,7 +348,7 @@ export function OffersSection() {
               <X aria-hidden="true" className="size-5" />
             </button>
 
-            <div className="relative min-h-[44svh] bg-[#201513] sm:min-h-[50svh] lg:min-h-[82svh]">
+            <div className="relative min-h-0 bg-[#201513] lg:min-h-[82svh]">
               <Image
                 src={selectedImage.src}
                 alt={selectedImage.alt}
@@ -375,7 +375,47 @@ export function OffersSection() {
             </div>
 
             <div className="flex min-h-0 flex-col overflow-y-auto p-4 sm:p-6 lg:max-h-[94svh] lg:p-7">
-              <div className="pr-10">
+              <div className="order-1 shrink-0 lg:order-2 lg:mt-7">
+                <div className="flex items-end justify-between gap-4">
+                  <h3 className="text-sm font-black uppercase tracking-[0.14em] text-[#AE3460]">
+                    Bilder
+                  </h3>
+                  <p className="text-sm font-bold text-[#5c4944]">
+                    {(selectedImageIndex ?? 0) + 1} /{" "}
+                    {selectedOffer.images.length}
+                  </p>
+                </div>
+
+                <div className="-mx-4 mt-3 flex h-24 items-center gap-2 overflow-x-auto overflow-y-hidden px-4 sm:-mx-6 sm:h-28 sm:px-6 lg:mx-0 lg:grid lg:h-auto lg:grid-cols-3 lg:items-stretch lg:overflow-visible lg:px-0">
+                  {selectedOffer.images.map((image, imageIndex) => (
+                    <button
+                      key={`${selectedOffer.title}-${image.src}-${image.title}`}
+                      type="button"
+                      onClick={() => selectImage(imageIndex)}
+                      className="group relative size-20 shrink-0 overflow-hidden rounded-md border-2 border-white bg-[#F6E6EB] text-left shadow-sm transition hover:border-[#AE3460]/60 data-[active=true]:border-[#AE3460] sm:size-24 lg:size-auto lg:aspect-square"
+                      data-active={selectedImageIndex === imageIndex}
+                      aria-pressed={selectedImageIndex === imageIndex}
+                      aria-label={`${image.title} anzeigen`}
+                    >
+                      <Image
+                        src={image.src}
+                        alt=""
+                        fill
+                        sizes="(min-width: 1024px) 96px, 30vw"
+                        className="object-cover transition duration-200 group-hover:scale-105"
+                      />
+                      <span
+                        className="absolute inset-x-0 bottom-0 bg-linear-to-t from-[#201513]/80 to-transparent p-2 text-xs font-black leading-tight text-white opacity-0 transition group-hover:opacity-100 group-focus-visible:opacity-100"
+                        aria-hidden="true"
+                      >
+                        {image.title}
+                      </span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              <div className="order-2 mt-5 pr-10 lg:order-1 lg:mt-0">
                 <p className="section-kicker">Angebot im Detail</p>
                 <h2
                   id={modalTitleId}
@@ -390,54 +430,6 @@ export function OffersSection() {
                   {selectedOffer.detail}
                 </p>
               </div>
-
-              <div className="mt-5 sm:mt-7">
-                <div className="flex items-end justify-between gap-4">
-                  <h3 className="text-sm font-black uppercase tracking-[0.14em] text-[#AE3460]">
-                    Bilder
-                  </h3>
-                  <p className="text-sm font-bold text-[#5c4944]">
-                    {(selectedImageIndex ?? 0) + 1} /{" "}
-                    {selectedOffer.images.length}
-                  </p>
-                </div>
-              </div>
-
-              <div className="-mx-4 mt-3 grid grid-flow-col auto-cols-[5rem] gap-2 overflow-x-auto px-4 pb-2 sm:-mx-6 sm:auto-cols-[6rem] sm:px-6 lg:mx-0 lg:grid-flow-row lg:grid-cols-3 lg:px-0 lg:pb-0">
-                {selectedOffer.images.map((image, imageIndex) => (
-                  <button
-                    key={`${selectedOffer.title}-${image.src}-${image.title}`}
-                    type="button"
-                    onClick={() => selectImage(imageIndex)}
-                    className="group relative aspect-square overflow-hidden rounded-md border-2 border-white bg-[#F6E6EB] text-left shadow-sm transition hover:border-[#AE3460]/60 data-[active=true]:border-[#AE3460]"
-                    data-active={selectedImageIndex === imageIndex}
-                    aria-pressed={selectedImageIndex === imageIndex}
-                    aria-label={`${image.title} anzeigen`}
-                  >
-                    <Image
-                      src={image.src}
-                      alt=""
-                      fill
-                      sizes="(min-width: 1024px) 96px, 30vw"
-                      className="object-cover transition duration-200 group-hover:scale-105"
-                    />
-                    <span
-                      className="absolute inset-x-0 bottom-0 bg-linear-to-t from-[#201513]/80 to-transparent p-2 text-xs font-black leading-tight text-white opacity-0 transition group-hover:opacity-100 group-focus-visible:opacity-100"
-                      aria-hidden="true"
-                    >
-                      {image.title}
-                    </span>
-                  </button>
-                ))}
-              </div>
-
-              <a
-                href="tel:+49309251265"
-                className="mt-5 inline-flex w-fit shrink-0 items-center gap-2 rounded-full bg-[#AE3460] px-5 py-3 text-sm font-black text-white transition hover:bg-[#8f294e] sm:mt-7"
-              >
-                Kategorie telefonisch anfragen
-                <ArrowRight aria-hidden="true" className="size-4" />
-              </a>
             </div>
           </div>
         </div>
