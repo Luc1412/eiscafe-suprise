@@ -32,6 +32,72 @@ type Offer = {
   images: OfferImage[];
 };
 
+const specialOccasionImages: OfferImage[] = [
+  {
+    src: "/images/offers/besondere-anlaesse/besondere-anlaesse-01.webp",
+    alt: "Festlich gedeckte Kaffeetafel im Eis-Café Surprise",
+    title: "Festlich gedeckte Kaffeetafel",
+    description:
+      "Eine vorbereitete Tafel mit Blumen, Kerzen und kleinen herzhaften Häppchen für eine gemeinsame Runde.",
+  },
+  {
+    src: "/images/offers/besondere-anlaesse/besondere-anlaesse-02.webp",
+    alt: "Gedeckter Tisch für eine Feier im Eis-Café Surprise",
+    title: "Tischdekoration im Café",
+    description:
+      "Eingedeckte Plätze mit Servietten, Gläsern und Dekoration für kleine Feiern im Café.",
+  },
+  {
+    src: "/images/offers/besondere-anlaesse/besondere-anlaesse-03.webp",
+    alt: "Vorbereitete Kaffeetafel für einen besonderen Anlass",
+    title: "Vorbereitete Plätze",
+    description:
+      "Liebevoll eingedeckte Tische schaffen einen persönlichen Rahmen für Familie und Gäste.",
+  },
+  {
+    src: "/images/offers/besondere-anlaesse/besondere-anlaesse-04.webp",
+    alt: "Platte mit herzhaften Häppchen für eine Feier",
+    title: "Herzhafte Häppchen",
+    description:
+      "Kleine belegte Häppchen ergänzen Kaffee, Kuchen und Torten bei ausgewählten Anlässen.",
+  },
+  {
+    src: "/images/offers/besondere-anlaesse/besondere-anlaesse-05.webp",
+    alt: "Feierlich gedeckter Tisch im Kaffeehausstil",
+    title: "Feier im Kaffeehausstil",
+    description:
+      "Klassische Caféatmosphäre mit gedeckten Tischen für ruhige, persönliche Zusammenkünfte.",
+  },
+  {
+    src: "/images/offers/besondere-anlaesse/besondere-anlaesse-06.webp",
+    alt: "Gedeckte Tafel für eine kleine Veranstaltung",
+    title: "Kleine Veranstaltung",
+    description:
+      "Ein kompakter Rahmen für Geburtstage, Familienfeiern oder ein gemeinsames Gedenken.",
+  },
+  {
+    src: "/images/offers/besondere-anlaesse/besondere-anlaesse-07.webp",
+    alt: "Anlassgedeck mit Blumen und Getränken",
+    title: "Details am Platz",
+    description:
+      "Blumen, Getränke und gedeckte Plätze werden passend zur Runde vorbereitet.",
+  },
+  {
+    src: "/images/offers/besondere-anlaesse/besondere-anlaesse-08.webp",
+    alt: "Gedeckter Cafébereich für besondere Anlässe",
+    title: "Persönlicher Cafébereich",
+    description:
+      "Der Cafébereich lässt sich für kleinere Gruppen gemütlich und übersichtlich herrichten.",
+  },
+  {
+    src: "/images/offers/besondere-anlaesse/besondere-anlaesse-09.webp",
+    alt: "Gedeckter Platz mit kleinen Häppchen im Eis-Café Surprise",
+    title: "Häppchen am Platz",
+    description:
+      "Auf Wunsch ergänzen kleine herzhafte Teller die gedeckte Kaffeetafel.",
+  },
+];
+
 const offers: Offer[] = [
   {
     title: "Torten & Kuchen",
@@ -159,29 +225,7 @@ const offers: Offer[] = [
     detail:
       "Für kleine Runden bis etwa 25 Personen bieten wir einen gemütlichen Rahmen im Café. Sprechen Sie uns für Geburtstage, Hochzeiten, Familienfeiern oder Trauerfeiern gern an.",
     icon: Sparkles,
-    images: [
-      {
-        src: "/images/carousel/eiscafe-carousel_1.webp",
-        alt: "Innenansicht des Eis-Cafés Surprise",
-        title: "Feiern im Café",
-        description:
-          "Ein persönlicher Rahmen für kleinere Gruppen in vertrauter Kaffeehausatmosphäre.",
-      },
-      {
-        src: "/images/carousel/eiscafe-carousel_3.webp",
-        alt: "Kaffeehausatmosphäre im Eis-Café Surprise",
-        title: "Ruhige Atmosphäre",
-        description:
-          "Geeignet für Familienfeiern, Geburtstage und gemeinsame Kaffeetafeln.",
-      },
-      {
-        src: "/images/carousel/eiscafe-carousel_4.webp",
-        alt: "Hausgemachte Spezialitäten im Eis-Café Surprise",
-        title: "Süße Begleitung",
-        description:
-          "Torten, Kuchen und Getränke lassen sich passend zum Anlass abstimmen.",
-      },
-    ],
+    images: specialOccasionImages,
   },
 ];
 
