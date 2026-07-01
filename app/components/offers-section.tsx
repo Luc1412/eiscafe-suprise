@@ -29,7 +29,7 @@ type Offer = {
   text: string;
   detail: string;
   icon: LucideIcon;
-  images: OfferImage[];
+  images?: OfferImage[];
 };
 
 const specialOccasionImages: OfferImage[] = [
@@ -213,29 +213,6 @@ const offers: Offer[] = [
     detail:
       "Ob ein Stück Kuchen zum Kaffee oder eine Torte für die Kaffeetafel: Unsere Backwaren entstehen mit sorgfältig ausgewählten Zutaten und viel Erfahrung im Haus.",
     icon: CakeSlice,
-    images: [
-      {
-        src: "/images/carousel/eiscafe-carousel_2.webp",
-        alt: "Torten und Eis im Eis-Café Surprise",
-        title: "Hausgemachte Kuchenauswahl",
-        description:
-          "Frische Kuchen und Torten für die gemütliche Kaffeezeit im Café oder zum Mitnehmen.",
-      },
-      {
-        src: "/images/carousel/eiscafe-carousel_0.webp",
-        alt: "Klassische Kuchenauslage im Eis-Café Surprise",
-        title: "Klassische Auslage",
-        description:
-          "Die Auswahl wechselt je nach Saison, Anlass und handwerklicher Vorbereitung.",
-      },
-      {
-        src: "/images/carousel/eiscafe-carousel_4.webp",
-        alt: "Hausgemachte Spezialitäten im Eis-Café Surprise",
-        title: "Süße Spezialitäten",
-        description:
-          "Von vertrauten Klassikern bis zu kleinen Überraschungen aus der hauseigenen Herstellung.",
-      },
-    ],
   },
   {
     title: "Hausgemachtes Eis",
@@ -243,29 +220,6 @@ const offers: Offer[] = [
     detail:
       "Unser Eis wird im Café selbst hergestellt. Neben beliebten Klassikern gibt es saisonale Sorten und Eisbecher für kleine Pausen oder den Besuch mit Familie und Freunden.",
     icon: IceCreamBowl,
-    images: [
-      {
-        src: "/images/carousel/eiscafe-carousel_2.webp",
-        alt: "Eisspezialitäten und Torten im Eis-Café Surprise",
-        title: "Eis aus eigener Herstellung",
-        description:
-          "Cremige Sorten, Fruchteis und saisonale Ideen direkt aus der hauseigenen Produktion.",
-      },
-      {
-        src: "/images/carousel/eiscafe-carousel_4.webp",
-        alt: "Hausgemachte Eiscafé-Spezialitäten",
-        title: "Eisbecher und Extras",
-        description:
-          "Für den spontanen Besuch, den Sonntagnachmittag oder als süßer Abschluss.",
-      },
-      {
-        src: "/images/carousel/eiscafe-carousel_1.webp",
-        alt: "Innenansicht des Eis-Cafés Surprise",
-        title: "Genießen im Café",
-        description:
-          "Eis und Kaffeehausatmosphäre gehören bei uns seit vielen Jahren zusammen.",
-      },
-    ],
   },
   {
     title: "Kaffee & Getränke",
@@ -273,29 +227,6 @@ const offers: Offer[] = [
     detail:
       "In unserer Kaffeehausatmosphäre servieren wir Kaffee, Heißgetränke und passende Begleiter für eine ruhige Pause an der Langhansstraße.",
     icon: Coffee,
-    images: [
-      {
-        src: "/images/carousel/eiscafe-carousel_3.webp",
-        alt: "Kaffeehausatmosphäre im Eis-Café Surprise",
-        title: "Kaffeehausgefühl",
-        description:
-          "Ein Platz für Gespräche, Pausen und süße Begleitung im Stil eines Wiener Cafés.",
-      },
-      {
-        src: "/images/carousel/eiscafe-carousel_1.webp",
-        alt: "Gemütliche Innenansicht des Eis-Cafés Surprise",
-        title: "Gemütliche Plätze",
-        description:
-          "Warme Atmosphäre für Gäste aller Altersgruppen mitten in Berlin-Weißensee.",
-      },
-      {
-        src: "/images/carousel/eiscafe-carousel_0.webp",
-        alt: "Kuchenauslage im Eis-Café Surprise",
-        title: "Dazu ein Stück Kuchen",
-        description:
-          "Kaffee und hausgemachte Kuchen verbinden sich zu einem klassischen Cafébesuch.",
-      },
-    ],
   },
   {
     title: "Individuelle Torten",
@@ -324,6 +255,9 @@ export function OffersSection() {
 
   const selectedOffer =
     selectedOfferIndex === null ? null : (offers[selectedOfferIndex] ?? null);
+  const selectedOfferImages = selectedOffer?.images ?? [];
+  const selectedOfferHasImages = selectedOfferImages.length > 0;
+  const SelectedOfferIcon = selectedOffer?.icon;
   const {
     clearSelection: clearImageSelection,
     selectedIndex: selectedImageIndex,
@@ -331,11 +265,15 @@ export function OffersSection() {
     selectIndex: selectImage,
     showNext,
     showPrevious,
-  } = useImageNavigation(selectedOffer?.images ?? []);
+  } = useImageNavigation(selectedOfferImages);
 
   function openOffer(index: number) {
     setSelectedOfferIndex(index);
-    selectImage(0);
+    if ((offers[index]?.images?.length ?? 0) > 0) {
+      selectImage(0);
+    } else {
+      clearImageSelection();
+    }
   }
 
   const closeOffer = useCallback(
@@ -347,7 +285,7 @@ export function OffersSection() {
   );
 
   useImageDialogControls({
-    isOpen: Boolean(selectedOffer && selectedImage),
+    isOpen: Boolean(selectedOffer),
     lockBodyScroll: true,
     onClose: closeOffer,
     onNext: showNext,
@@ -372,6 +310,7 @@ export function OffersSection() {
         <div className="mt-10 flex flex-wrap justify-center gap-4">
           {offers.map((offer, index) => {
             const Icon = offer.icon;
+            const hasGallery = (offer.images?.length ?? 0) > 0;
 
             return (
               <button
@@ -379,7 +318,7 @@ export function OffersSection() {
                 type="button"
                 onClick={() => openOffer(index)}
                 className="group flex w-full cursor-pointer flex-col rounded-lg border border-[#efd7dc] bg-[#fffafc] p-6 text-left shadow-sm transition duration-200 hover:-translate-y-1 hover:border-[#AE3460]/55 hover:bg-white hover:shadow-lg focus-visible:-translate-y-1 sm:w-[calc((100%-1rem)/2)] lg:w-[calc((100%-2rem)/3)]"
-                aria-label={`${offer.title}: Details und Galerie öffnen`}
+                aria-label={`${offer.title}: ${hasGallery ? "Details und Galerie" : "Details"} öffnen`}
               >
                 <span className="mb-5 flex items-start justify-between gap-4">
                   <span className="grid size-11 shrink-0 place-items-center rounded-full bg-[#F6E6EB] text-[#AE3460] transition group-hover:bg-[#AE3460] group-hover:text-white">
@@ -400,7 +339,9 @@ export function OffersSection() {
                   {offer.text}
                 </span>
                 <span className="mt-5 inline-flex items-center gap-2 text-sm font-black text-[#AE3460]">
-                  Galerie und Beschreibung ansehen
+                  {hasGallery
+                    ? "Galerie und Beschreibung ansehen"
+                    : "Details ansehen"}
                   <ArrowRight
                     aria-hidden="true"
                     className="size-4 transition group-hover:translate-x-1"
@@ -411,6 +352,50 @@ export function OffersSection() {
           })}
         </div>
       </div>
+
+      {selectedOffer && !selectedOfferHasImages && SelectedOfferIcon && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby={modalTitleId}
+          aria-describedby={modalDescriptionId}
+          className="fixed inset-0 z-70 grid place-items-center bg-[#201513]/82 p-3 backdrop-blur-sm sm:p-5"
+          onClick={closeOffer}
+        >
+          <div
+            className="relative w-full max-w-2xl overflow-hidden rounded-lg border border-white/25 bg-[#fffafc] p-6 shadow-2xl sm:p-8"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <button
+              type="button"
+              onClick={closeOffer}
+              className="absolute right-3 top-3 z-10 grid size-10 place-items-center rounded-full bg-white text-[#201513] shadow-sm ring-1 ring-[#efd7dc] transition hover:bg-[#F6E6EB]"
+              aria-label="Details schließen"
+            >
+              <X aria-hidden="true" className="size-5" />
+            </button>
+
+            <div className="grid size-14 place-items-center rounded-full bg-[#F6E6EB] text-[#AE3460]">
+              <SelectedOfferIcon aria-hidden="true" className="size-7" />
+            </div>
+            <div className="mt-6 pr-10">
+              <p className="section-kicker">Angebot im Detail</p>
+              <h2
+                id={modalTitleId}
+                className="mt-3 font-(family-name:--font-display) text-4xl leading-tight font-bold text-[#201513] sm:text-5xl"
+              >
+                {selectedOffer.title}
+              </h2>
+              <p
+                id={modalDescriptionId}
+                className="mt-5 text-lg leading-8 text-[#4d3a35]"
+              >
+                {selectedOffer.detail}
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
 
       {selectedOffer && selectedImage && (
         <div
@@ -468,12 +453,12 @@ export function OffersSection() {
                   </h3>
                   <p className="text-sm font-bold text-[#5c4944]">
                     {(selectedImageIndex ?? 0) + 1} /{" "}
-                    {selectedOffer.images.length}
+                    {selectedOfferImages.length}
                   </p>
                 </div>
 
                 <div className="-mx-4 mt-3 flex h-24 items-center gap-2 overflow-x-auto overflow-y-hidden px-4 sm:-mx-6 sm:h-28 sm:px-6 lg:mx-0 lg:grid lg:h-auto lg:grid-cols-3 lg:items-stretch lg:overflow-visible lg:px-0">
-                  {selectedOffer.images.map((image, imageIndex) => (
+                  {selectedOfferImages.map((image, imageIndex) => (
                     <button
                       key={`${selectedOffer.title}-${image.src}-${image.title}`}
                       type="button"
