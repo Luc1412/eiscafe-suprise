@@ -98,6 +98,114 @@ const specialOccasionImages: OfferImage[] = [
   },
 ];
 
+const individualCakeImages: OfferImage[] = [
+  {
+    src: "/images/offers/individuelle-torten/individuelle-torten-10.webp",
+    alt: "Fototorte mit König-der-Löwen-Motiv",
+    title: "Fototorte mit Motiv",
+    description:
+      "Ein persönliches Bildmotiv wird mit farbiger Verzierung und passendem Rand kombiniert.",
+  },
+  {
+    src: "/images/offers/individuelle-torten/individuelle-torten-11.webp",
+    alt: "Fototorte mit Eiskönigin-Motiv und Name",
+    title: "Fototorte mit Name",
+    description:
+      "Fotomotiv, Name und Randdekoration machen die Torte zu einer persönlichen Überraschung.",
+  },
+  {
+    src: "/images/offers/individuelle-torten/individuelle-torten-14.webp",
+    alt: "Fototorte mit mehreren Familienbildern",
+    title: "Bildertorte mit Collage",
+    description:
+      "Mehrere Bilder und persönliche Texte können zu einer großen Fototorte kombiniert werden.",
+  },
+  {
+    src: "/images/offers/individuelle-torten/individuelle-torten-02.webp",
+    alt: "Geburtstagstorte zum 60. Geburtstag mit Rosen",
+    title: "Geburtstagstorte zum 60.",
+    description:
+      "Zahlen, Rosen und farbige Dekoration werden passend zum Geburtstag abgestimmt.",
+  },
+  {
+    src: "/images/offers/individuelle-torten/individuelle-torten-05.webp",
+    alt: "Schokoladige Geburtstagstorte mit Namen",
+    title: "Geburtstagstorte mit Name",
+    description:
+      "Eine persönliche Torte mit Namen, Kerzen und verspielter Dekoration für Kindergeburtstage.",
+  },
+  {
+    src: "/images/offers/individuelle-torten/individuelle-torten-13.webp",
+    alt: "Geburtstagstorte mit Zahl Drei und Beeren",
+    title: "Geburtstagstorte mit Zahl",
+    description:
+      "Zahlen, kleine Sahnetupfen und Früchte setzen das Alter sichtbar in Szene.",
+  },
+  {
+    src: "/images/offers/individuelle-torten/individuelle-torten-15.webp",
+    alt: "Kleine runde Geburtstagstorte mit Beeren und Schrift",
+    title: "Kleine Geburtstagstorte",
+    description:
+      "Auch kleinere Torten lassen sich mit Schrift, Beeren und Dekor persönlich gestalten.",
+  },
+  {
+    src: "/images/offers/individuelle-torten/individuelle-torten-01.webp",
+    alt: "Herztorte mit Rosen, Ringen und Datum",
+    title: "Herztorte zum Anlass",
+    description:
+      "Herzform, Rosen, Ringe und Datum eignen sich für Hochzeitstage und persönliche Jubiläen.",
+  },
+  {
+    src: "/images/offers/individuelle-torten/individuelle-torten-09.webp",
+    alt: "Mehrstöckige Hochzeitstorte mit Beeren",
+    title: "Hochzeitstorte mit Beeren",
+    description:
+      "Früchte, Creme und eine höhere Form ergeben eine festliche Hochzeitstorte.",
+  },
+  {
+    src: "/images/offers/individuelle-torten/individuelle-torten-03.webp",
+    alt: "Zweistufige Hochzeitstorte mit Rosen",
+    title: "Zweistufige Hochzeitstorte",
+    description:
+      "Mehrstöckige Torten mit Rosen und Cremeverzierung schaffen einen festlichen Mittelpunkt.",
+  },
+  {
+    src: "/images/offers/individuelle-torten/individuelle-torten-04.webp",
+    alt: "Hohe Hochzeitstorte mit Rosen und silberner Oberfläche",
+    title: "Hohe Hochzeitstorte",
+    description:
+      "Hohe Tortenformen lassen sich mit Rosen, Struktur und feinen Details gestalten.",
+  },
+  {
+    src: "/images/offers/individuelle-torten/individuelle-torten-12.webp",
+    alt: "Festliche Torte mit Drip-Dekor und Rosen",
+    title: "Festliche Rosentorte",
+    description:
+      "Drip-Dekor, Rosen und Früchte passen zu Hochzeiten, Jubiläen und festlichen Feiern.",
+  },
+  {
+    src: "/images/offers/individuelle-torten/individuelle-torten-06.webp",
+    alt: "Einschulungstorte mit Name, Stift und bunter Dekoration",
+    title: "Einschulungstorte mit Name",
+    description:
+      "Name, Stiftmotiv und bunte Dekoration machen die Torte passend zum Schulstart.",
+  },
+  {
+    src: "/images/offers/individuelle-torten/individuelle-torten-07.webp",
+    alt: "Einschulungstorte mit ABC, Stift und Erdbeeren",
+    title: "Einschulungstorte mit ABC",
+    description:
+      "ABC, Stift und frische Dekoration greifen den Schulanfang spielerisch auf.",
+  },
+  {
+    src: "/images/offers/individuelle-torten/individuelle-torten-08.webp",
+    alt: "Einschulungstorte mit Unterwasser-Motiv, Zahlen und Stiften",
+    title: "Einschulungstorte mit Motiv",
+    description:
+      "Motivbild, Zahlen, Buchstaben und Stifte verbinden Einschulung und Lieblingsthema.",
+  },
+];
+
 const offers: Offer[] = [
   {
     title: "Torten & Kuchen",
@@ -195,29 +303,7 @@ const offers: Offer[] = [
     detail:
       "Für persönliche Anlässe fertigen wir individuelle Torten nach Absprache. Besonders gefragt sind Fototorten, Bildertorten und festliche Torten für Familienfeiern.",
     icon: CakeSlice,
-    images: [
-      {
-        src: "/images/carousel/eiscafe-carousel_4.webp",
-        alt: "Hausgemachte Spezialitäten und Torten im Eis-Café Surprise",
-        title: "Torten nach Wunsch",
-        description:
-          "Für Geburtstage, Hochzeiten, Einschulungen und persönliche Überraschungen.",
-      },
-      {
-        src: "/images/carousel/eiscafe-carousel_2.webp",
-        alt: "Torten und Eis im Eis-Café Surprise",
-        title: "Fototorten und Bildertorten",
-        description:
-          "Persönliche Motive machen die Torte zu einem individuellen Mittelpunkt.",
-      },
-      {
-        src: "/images/carousel/eiscafe-carousel_0.webp",
-        alt: "Klassische Kuchenauslage im Eis-Café Surprise",
-        title: "Vorbestellung empfohlen",
-        description:
-          "Wir stimmen Größe, Anlass und Gestaltung gern direkt mit Ihnen ab.",
-      },
-    ],
+    images: individualCakeImages,
   },
   {
     title: "Besondere Anlässe",
