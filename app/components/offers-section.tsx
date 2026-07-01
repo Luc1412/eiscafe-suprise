@@ -128,13 +128,6 @@ const individualCakeImages: OfferImage[] = [
       "Zahlen, Rosen und farbige Dekoration werden passend zum Geburtstag abgestimmt.",
   },
   {
-    src: "/images/offers/individuelle-torten/individuelle-torten-05.webp",
-    alt: "Schokoladige Geburtstagstorte mit Namen",
-    title: "Geburtstagstorte mit Name",
-    description:
-      "Eine persönliche Torte mit Namen, Kerzen und verspielter Dekoration für Kindergeburtstage.",
-  },
-  {
     src: "/images/offers/individuelle-torten/individuelle-torten-13.webp",
     alt: "Geburtstagstorte mit Zahl Drei und Beeren",
     title: "Geburtstagstorte mit Zahl",
@@ -143,10 +136,10 @@ const individualCakeImages: OfferImage[] = [
   },
   {
     src: "/images/offers/individuelle-torten/individuelle-torten-15.webp",
-    alt: "Kleine runde Geburtstagstorte mit Beeren und Schrift",
-    title: "Kleine Geburtstagstorte",
+    alt: "Zweistöckige Geburtstagstorte mit Beeren und Schrift",
+    title: "Zweistöckige Geburtstagstorte",
     description:
-      "Auch kleinere Torten lassen sich mit Schrift, Beeren und Dekor persönlich gestalten.",
+      "Zwei Lagen, Beeren und Schrift machen die Geburtstagstorte festlich und persönlich.",
   },
   {
     src: "/images/offers/individuelle-torten/individuelle-torten-01.webp",
@@ -171,10 +164,10 @@ const individualCakeImages: OfferImage[] = [
   },
   {
     src: "/images/offers/individuelle-torten/individuelle-torten-04.webp",
-    alt: "Hohe Hochzeitstorte mit Rosen und silberner Oberfläche",
-    title: "Hohe Hochzeitstorte",
+    alt: "Zweistöckige Hochzeitstorte mit frischen Blumen",
+    title: "Hochzeitstorte mit frischen Blumen",
     description:
-      "Hohe Tortenformen lassen sich mit Rosen, Struktur und feinen Details gestalten.",
+      "Zwei Lagen, frische Blumen und feine Oberflächenstruktur ergeben eine festliche Hochzeitstorte.",
   },
   {
     src: "/images/offers/individuelle-torten/individuelle-torten-12.webp",
@@ -184,9 +177,16 @@ const individualCakeImages: OfferImage[] = [
       "Drip-Dekor, Rosen und Früchte passen zu Hochzeiten, Jubiläen und festlichen Feiern.",
   },
   {
+    src: "/images/offers/individuelle-torten/individuelle-torten-05.webp",
+    alt: "Schokoladige Einschulungstorte mit Namen",
+    title: "Einschulungstorte mit Name",
+    description:
+      "Name, Kerzen und bunte Dekoration machen die Torte passend zum Schulstart.",
+  },
+  {
     src: "/images/offers/individuelle-torten/individuelle-torten-06.webp",
     alt: "Einschulungstorte mit Name, Stift und bunter Dekoration",
-    title: "Einschulungstorte mit Name",
+    title: "Einschulungstorte mit Stift",
     description:
       "Name, Stiftmotiv und bunte Dekoration machen die Torte passend zum Schulstart.",
   },
